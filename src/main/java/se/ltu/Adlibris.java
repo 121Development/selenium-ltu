@@ -13,6 +13,10 @@ public class Adlibris {
 
         driver.get("https://www.adlibris.com/se");
         driver.manage().window().setSize(new Dimension(1755, 891));
+
+        //To acceppt cookies b/c my firefox has all the privacy plugins
+        if(driver.findElement(By.id("didomi-notice-agree-button")) != null);
+            driver.findElement(By.id("didomi-notice-agree-button")).click();
         driver.findElement(By.id("q")).click();
         driver.findElement(By.id("q")).sendKeys("praktisk mjukvarutestning");
         driver.findElement(By.cssSelector(".material-icons__search")).click();
