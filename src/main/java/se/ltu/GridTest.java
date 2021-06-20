@@ -12,17 +12,13 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-
     public class GridTest {
         public WebDriver driver;
         public String URL, Node;
-        //protected ThreadLocal<RemoteWebDriver> threadDriver = null;
 
     public void launchbrowser() throws MalformedURLException, InterruptedException {
         String URL = "http://www.google.com";
         String Node = "http://54.144.249.46:4444/wd/hub";
-
-        //System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 
         System.out.println(">> Setting Chrome options");
         ChromeOptions options = new ChromeOptions();
@@ -35,10 +31,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
                 "--disable-dev-shm-usage",
                 "--ignore-certificate-errors",
                 "--ignore-ssl-errors");
-
- //       DesiredCapabilities cap = new DesiredCapabilities();
- //       cap.setCapability(ChromeOptions.CAPABILITY, options);
- //       options.merge(cap);
 
         System.out.println(">> Trying to connect");
         WebDriver driver = new RemoteWebDriver(new URL(Node), options);
