@@ -1,24 +1,33 @@
 package se.ltu;
 
 import java.net.MalformedURLException;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) throws InterruptedException, MalformedURLException {
 
-        //GoogleSearch google = new GoogleSearch();
-        //google.search();
+        Scanner in = new Scanner(System.in);
+        System.out.print("Do you want to conduct the Grid test (y) or skip and do the other tests (n)? y/n: ");
+        String s = in.nextLine();
 
-        GridTest gt = new GridTest();
-        gt.launchbrowser();
+        if (s.equalsIgnoreCase("y")){
+            GridTest gt = new GridTest();
+            gt.launchbrowser();
+        }
 
-/*
-        Actitime actitimeFill = new Actitime();
-        actitimeFill.fillForm();
+        GoogleSearch google = new GoogleSearch();
+        google.search();
 
         Adlibris adlibrisFill = new Adlibris();
         adlibrisFill.fillForm();
-*/
+
+        Actitime actitimeFill = new Actitime();
+        actitimeFill.fillForm();
+
+
+
+
 
     }
 }

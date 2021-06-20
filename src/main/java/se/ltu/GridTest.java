@@ -24,7 +24,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless",
                 "--disable-gpu",
-                "--window-size=1920,1200",
                 "--ignore-certificate-errors",
                 "--disable-extensions",
                 "--no-sandbox",
@@ -36,7 +35,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
         WebDriver driver = new RemoteWebDriver(new URL(Node), options);
 
         System.out.println(">> navigating to: " + URL);
-        driver.navigate().to("http://www.google.com");
+        driver.navigate().to(URL);
 
         System.out.println(">> Remote connected");
         System.out.println(">> Connected to: "+ driver.getCurrentUrl());
