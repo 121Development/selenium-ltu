@@ -9,7 +9,7 @@ import java.lang.*;
 
 public class GoogleSearch {
 
-    void DoSearch() throws InterruptedException {
+    void search() throws InterruptedException {
         System.setProperty("webdriver.gecko.driver", "/usr/local/bin/geckodriver");
         WebDriver driver = new FirefoxDriver();
         driver.get("https://www.google.com");
